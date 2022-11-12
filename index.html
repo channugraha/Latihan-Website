@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Profile</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+    <div class="banner">
+        <img class="layer-1" src="image/layer_bg.png">
+        <img class="layer-2" src="image/comet.png">
+
+        <div class="layer-3">
+                <h1>Selamat Datang</h1>
+            </div>
+            
+        <img class="layer-4" src="image/layer3.png">
+        <img class="layer-5" src="image/layer2.png">
+        <img class="layer-6" src="image/layer1.png">
+    </div>
+
+    <div class="content">
+        <div id="main">
+        <h1>My Profile</h1>
+        </div>
+        <img class ="profile" src="image/myphoto.jpg">
+        <p>Chandra Nugraha Ramadhan<br>
+            Jakarta, 12 Januari 2002<br>
+            087789209040<br>
+            candranugraha.cnr@gmail.com<br>
+            Perum Bumi Cikarang Asri Blok H12 No.6, Ciantra, Cikarang Selatan, Kab.Bekasi
+        </p>
+    <div class="table-1">
+    <table class="table">
+        <h1>Daftar Riwayat Pendidikan</h1>
+        <thead>
+          <tr>
+            <th scope="col">Jenjang Pendidikan</th>
+            <th scope="col">Nama Sekolah</th>
+            <th scope="col">Tahun Masuk</th>
+            <th scope="col">Tahun Lulus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SD</td>
+            <td>SD Bojong Rawalumbu IV & SD Ciantra 02</td>
+            <td>2008</td>
+            <td>2014</td>
+          </tr>
+          <tr>
+            <td>SMP</td>
+            <td>SMP Negeri 1 Cikarang Selatan</td>
+            <td>2014</td>
+            <td>2017</td>
+          </tr>
+          <tr>
+            <td>SMK</td>
+            <td>SMK Negeri 1 Cikarang Selatan</td>
+            <td>2017</td>
+            <td>2020</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+
+      <div class="table-2">
+        <table class="table">
+            <h1>Daftar Riwayat Pekerjaan</h1>
+            <thead>
+              <tr>
+                <th scope="col">Nama Perusahaan</th>
+                <th scope="col">Status</th>
+                <th scope="col">Jabatan</th>
+                <th scope="col">Tahun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PT. Techno Indonesia</td>
+                <td>Praktik Kerja Lapangan</td>
+                <td>Admin Produksi</td>
+                <td>2018</td>
+              </tr>
+              <tr>
+                <td>Batiqa Hotel Jababeka</td>
+                <td>Praktik Kerja Lapangan</td>
+                <td>Sales Marketing & IT Support</td>
+                <td>2019</td>
+              </tr>
+              <tr>
+                <td>PT. NGK Ceramics Indonesia</td>
+                <td>Karyawan Kontrak</td>
+                <td>Operator Produksi</td>
+                <td>2020</td>
+              </tr>
+            </tbody>
+            </table>
+        </div>
+
+    <div class="show">
+        <h1>Show</h1>
+        <a class="button" href="#main">Button</a>
+    </div>
+
+    <div class="bodycalc">
+        <div class ="calculator">
+         <div class ="buttons">
+            <h2 id ="value"></h2>
+            <span id ="clear">Clear</span>
+            <span>/</span>
+            <span>*</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>-</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span id ="plus">+</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>0</span>
+            <span>00</span>
+            <span>.</span>
+            <span id ="equal">=</span>
+         </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+
+    <script type="text/javascript">
+
+        let layer_1 = document.querySelector('.layer-1');
+        let layer_2 = document.querySelector('.layer-2');
+        let layer_3 = document.querySelector('.layer-3');
+        let layer_4 = document.querySelector('.layer-4');
+        let layer_5 = document.querySelector('.layer-5');
+        let layer_6 = document.querySelector('.layer-6');
+       
+        window.onscroll = function(){
+            let Y = window.scrollY;
+
+            layer_1.style.transform = 'translateY('+ Y/0 +'px)';
+            layer_2.style.transform = 'translateY('+ Y/1.5 +'px)';
+            layer_3.style.transform = 'translateY('+ Y/0 +'px)';
+            layer_4.style.transform = 'translateY('+ Y/13.5 +'px)';
+            layer_5.style.transform = 'translateY('+ Y/40 +'px)';
+            layer_6.style.transform = 'translateY('+ Y/12.9 +'px)';
+        }
+    </script>
+
+    <script>
+        let buttons = document.querySelector('.buttons');
+        let btn = document.querySelectorAll('span');
+        let value = document.getElementById('value');
+
+        for (let i=0; i<btn.length;i++){
+            btn[i].addEventListener("click", function(){
+
+                if(this.innerHTML=="="){
+                    value.innerHTML = eval(value.innerHTML);
+                }else{
+                    if(this.innerHTML=="Clear"){
+                        value.innerHTML = "";
+                    }
+                    else{
+                        value.innerHTML += this.innerHTML;
+                    }
+                }
+            })
+        }
+    </script>
+</html>
