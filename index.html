@@ -100,10 +100,19 @@
         </div>
 
     <div class="show">
-        <h1>Show</h1>
-        <a class="button" href="#main">Button</a>
-    </div>
-
+        <h1>Show Informasi Biodata</h1>
+        <button onclick="fungsiklik()">SHOW</button>
+        <div id="target">
+        <p>Chandra Nugraha Ramadhan<br>
+          Jakarta, 12 Januari 2002<br>
+          087789209040<br>
+          candranugraha.cnr@gmail.com<br>
+          Perum Bumi Cikarang Asri Blok H12 No.6, Ciantra, Cikarang Selatan, Kab.Bekasi
+          </p>
+        </div>
+      </div>
+    
+    <h1>Kalkulator</h1>
     <div class="bodycalc">
         <div class ="calculator">
          <div class ="buttons">
@@ -146,13 +155,24 @@
         window.onscroll = function(){
             let Y = window.scrollY;
 
-            layer_1.style.transform = 'translateY('+ Y/0 +'px)';
+            layer_1.style.transform = 'translateY('+ Y/7.5 +'px)';
             layer_2.style.transform = 'translateY('+ Y/1.5 +'px)';
             layer_3.style.transform = 'translateY('+ Y/0 +'px)';
-            layer_4.style.transform = 'translateY('+ Y/13.5 +'px)';
-            layer_5.style.transform = 'translateY('+ Y/40 +'px)';
-            layer_6.style.transform = 'translateY('+ Y/12.9 +'px)';
+            layer_4.style.transform = 'translateY('+ Y/8 +'px)';
+            layer_5.style.transform = 'translateY('+ Y/20 +'px)';
+            layer_6.style.transform = 'translateY('+ Y/7 +'px)';
         }
+    </script>
+
+    <script>
+      function fungsiklik(){
+        var x = document.getElementById("target");
+        if (x.style.display === "none"){
+          x.style.display = "block";
+        }else{
+          x.style.display = "none";
+        }
+      }
     </script>
 
     <script>
